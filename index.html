@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Motion Lab — a cinematic GSAP 3 + ScrollTrigger demo." />
+  <meta name="theme-color" content="#070709" />
+  <title>Motion Lab — GSAP Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a class="nav-logo" href="#hero">Motion Lab</a>
+    <nav aria-label="Primary">
+      <ul class="nav-links">
+        <li><a href="#reveal">Reveal</a></li>
+        <li><a href="#pin">Pin</a></li>
+        <li><a href="#cards">Cards</a></li>
+        <li><a href="#outro">Close</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="orb" aria-hidden="true"></div>
+      <div class="orb orb-sm" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <p class="eyebrow" data-hero-fade>Motion Lab · Vol. 01</p>
+        <h1 class="hero-title" data-split-words>Motion is how ideas arrive</h1>
+        <p class="hero-lead" data-hero-fade>A single-page studio of GSAP 3 and ScrollTrigger — word reveals, scrubbed type, pinned frames, and cards that wait their turn.</p>
+        <a class="cta" href="#reveal" data-hero-fade>
+          <span>Enter the studio</span>
+          <span class="cta-arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+      <p class="hero-meta" data-hero-fade>
+        <span>No build step</span>
+        <span class="dot" aria-hidden="true"></span>
+        <span>jsDelivr CDN</span>
+        <span class="dot" aria-hidden="true"></span>
+        <span>Scroll to compose</span>
+      </p>
+    </section>
+    <section class="reveal" id="reveal">
+      <div class="reveal-sticky">
+        <p class="section-kicker">02 — Reveal</p>
+        <p class="reveal-line" data-split-chars>Type that arrives</p>
+        <p class="section-note">Opacity is a timeline. Scroll to write the sentence.</p>
+      </div>
+    </section>
+
+    <section class="pin" id="pin">
+      <div class="pin-track" id="pin-track">
+        <article class="panel panel-a">
+          <p class="panel-index">01</p>
+          <h2 class="panel-title">Compose</h2>
+          <p class="panel-body">A timeline is a room. You decide what enters first, what lingers, and what never needs to speak.</p>
+        </article>
+        <article class="panel panel-b">
+          <p class="panel-index">02</p>
+          <h2 class="panel-title">Orchestrate</h2>
+          <p class="panel-body">Easing is voice. Linear is a metronome. A custom curve is how the scene remembers it was human.</p>
+        </article>
+        <article class="panel panel-c">
+          <p class="panel-index">03</p>
+          <h2 class="panel-title">Pin</h2>
+          <p class="panel-body">Hold the frame while the world keeps scrolling. Horizontal motion is just time, turned on its side.</p>
+        </article>
+        <article class="panel panel-d">
+          <p class="panel-index">04</p>
+          <h2 class="panel-title">Release</h2>
+          <p class="panel-body">Let the last panel land. The cut is part of the choreography — silence after the hold.</p>
+        </article>
+      </div>
+    </section>
+    <section class="cards" id="cards">
+      <div class="cards-head">
+        <p class="section-kicker">04 — Features</p>
+        <h2 class="cards-title">Tools we keep on the bench</h2>
+      </div>
+      <ul class="card-grid">
+        <li class="card" data-card>
+          <span class="card-num">01</span>
+          <h3>Timeline control</h3>
+          <p>Sequence, overlap, and reverse without fighting the clock. Motion as a score, not a pile of timeouts.</p>
+        </li>
+        <li class="card" data-card>
+          <span class="card-num">02</span>
+          <h3>Scroll choreography</h3>
+          <p>ScrollTrigger pins, scrubs, and snaps so the page itself becomes the playhead.</p>
+        </li>
+        <li class="card" data-card>
+          <span class="card-num">03</span>
+          <h3>Easing as voice</h3>
+          <p>Curves that feel inevitable. Power, expo, and custom beziers instead of the same ease-out everywhere.</p>
+        </li>
+        <li class="card" data-card>
+          <span class="card-num">04</span>
+          <h3>Reduced motion</h3>
+          <p>If the OS asks for stillness, we skip the performance and leave every word already on stage.</p>
+        </li>
+      </ul>
+    </section>
+    <section class="outro" id="outro">
+      <p class="section-kicker">05 — Close</p>
+      <h2 class="outro-title">
+        <span class="outro-line" data-outro>Stillness is</span>
+        <span class="outro-line" data-outro>a kind of motion.</span>
+      </h2>
+      <p class="outro-foot">Motion Lab · GSAP 3 demo · Built without a bundler</p>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="main.js" defer></script>
+</body>
+</html>
